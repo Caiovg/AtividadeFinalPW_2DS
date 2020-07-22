@@ -1,0 +1,64 @@
+create database atividadepw_ii;
+use atividadepw_ii;
+create table funcionarios(
+idFuncionario int(11) primary key auto_increment not null,
+Nome varchar(100) not null,
+Sobrenome varchar(100) not null,
+CPF varchar(14) unique not null,
+UserName varchar(100) unique not null,
+Ativo tinyint(1) default 1 not null,
+Email varchar(100) unique not null,
+Cargo varchar(20) not null,
+Senha varchar(50) not null,
+Tipo varchar(20) not null,
+RG varchar(13) not null,
+Celular varchar(14) not null,
+Nascimento varchar(11) not null,
+Endereco varchar(100) not null,
+Numero varchar(20) not null,
+Complemento varchar(150) null 
+);
+create table usuario(
+idUsuario int(11) primary key auto_increment not null,
+Nome varchar(100) not null,
+Sobrenome varchar(100) not null,
+CPF varchar(14) unique not null,
+UserName varchar(100) unique not null,
+Ativo tinyint(1) default 1 not null,
+Email varchar(100) unique not null,
+Senha varchar(50) not null,
+Tipo varchar(20) not null,
+RG varchar(13) not null,
+Celular varchar(14) not null,
+Nascimento varchar(11) not null,
+Endereco varchar(100) not null,
+Numero varchar(20) not null,
+Complemento varchar(150) null 
+);
+create table produtos(
+idProduto int(11) primary key auto_increment not null,
+codBarras varchar(13) unique not null,
+nome varchar(100) not null,
+descricao varchar(100) not null,
+preco double not null,
+estoque int(11) not null,
+ativo varchar(10) not null,
+foto varchar(100) null
+);
+
+INSERT INTO Usuario (Nome, Sobrenome, CPF, UserName, Email, Senha, Tipo, RG, Celular, Nascimento, Endereco, Numero, Complemento)
+VALUES ('Caio','Vinicius','12345678','Caiovg','caio@gmail.com','123','cliente','123456789','123456789','21/11/2002','Aquela rua alí','100','Apto 21');
+INSERT INTO Funcionarios (Nome, Sobrenome, CPF, UserName, Email, Cargo, Senha, Tipo, RG, Celular, Nascimento, Endereco, Numero)
+VALUES ('teste1','teste1','teste1','teste1','teste1@gmail.com','Gerente de loja','teste1','administrador','teste1','teste1','teste1','teste1','teste1');
+INSERT INTO Funcionarios (Nome, Sobrenome, CPF, UserName, Email, Cargo, Senha, Tipo, RG, Celular, Nascimento, Endereco, Numero)
+VALUES ('teste2','teste2','teste2','teste2','teste2@gmail.com','Vendedor','teste2','funcionario','teste2','teste2','teste2','teste2','teste2');
+INSERT INTO Produtos (codBarras, nome, descricao, preco, estoque, ativo)
+VALUES (1,'Bolo de cenoura','Bolo de cenoura',12,'10','Ativo');
+INSERT INTO Produtos (codBarras, nome, descricao, preco, estoque, ativo)
+VALUES (2,'Bolo de coco','Bolo de coco',20,'40','Ativo');
+INSERT INTO Produtos (codBarras, nome, descricao, preco, estoque, ativo)
+VALUES (3,'Bolo de laranja','Bolo de laranja',5,'100','Ativo');
+INSERT INTO Produtos (codBarras, nome, descricao, preco, estoque, ativo)
+VALUES (4,'Bolacha Negresco','Bolacha da Negresco de chocolate',2,'60','Ativo');
+
+                

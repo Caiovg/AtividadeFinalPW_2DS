@@ -1,0 +1,11 @@
+.titulo{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 60px;
+}
+.corpo{
+    background-image: url("../imagens/fundo4.jpg");
+}
+.texto{
+    font-family: sans-serif;
+    color: cornsilk;
+}
